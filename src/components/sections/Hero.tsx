@@ -4,11 +4,12 @@ import { Button } from '@/components/ui/button';
 import ThreeJSBackground from '@/components/three/ParticleField';
 // import heroImage from '@/assets/hero-bg.jpg';
 import developerAvatar from '@/assets/subbu.jpg';
+import resumePDF from "@/assets/subramani.pdf";
 
 export default function Hero() {
   const [text, setText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const fullText = 'MERN Stack Developer';
+  const fullText = 'Software Engineer | Web and Mobile Developer';
 
   useEffect(() => {
     let index = 0;
@@ -38,7 +39,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           // backgroundImage: `url(${heroImage})`,
@@ -47,7 +48,7 @@ export default function Hero() {
           backgroundRepeat: 'no-repeat'
         }}
       />
-      
+
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-background/70 z-[1]" />
 
@@ -88,8 +89,8 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse"></div>
             {/* Floating particles around avatar */}
             <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full animate-float"></div>
-            <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-secondary rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-            <div className="absolute top-1/2 -right-4 w-2 h-2 bg-primary-glow rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+            <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-secondary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 -right-4 w-2 h-2 bg-primary-glow rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
 
@@ -108,7 +109,7 @@ export default function Hero() {
         {/* Tagline */}
         <div className="animate-fade-in animate-delay-700">
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Building full-stack experiences that scale. Passionate about creating 
+            Building full-stack experiences that scale. Passionate about creating
             innovative web solutions with modern technologies and best practices.
           </p>
         </div>
@@ -124,14 +125,16 @@ export default function Hero() {
             <Mail className="w-5 h-5 mr-2" />
             Hire Me
           </Button> */}
-          <Button
-            variant="outline"
-            size="lg"
-            className="min-w-48"
-          >
-            <Download className="w-5 h-5 mr-2" />
-            Download Resume
-          </Button>
+          <a href={resumePDF} download="Subramani_Resume.pdf">
+            <Button
+              variant="outline"
+              size="lg"
+              className="min-w-48"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Resume
+            </Button>
+          </a>
         </div>
 
         {/* Stats */}
