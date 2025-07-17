@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import ThreeJSBackground from '@/components/three/ParticleField';
 // import heroImage from '@/assets/hero-bg.jpg';
 import developerAvatar from '@/assets/subbu.jpg';
-import resumePDF from "@/assets/subramani.pdf";
+import resumePDF from "@/assets/Subramani.pdf";
 
 export default function Hero() {
   const [text, setText] = useState('');
